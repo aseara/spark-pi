@@ -14,9 +14,8 @@ public class SparkPi {
 
     public static void main(String[] args) {
 
-        SparkConf conf = new SparkConf().setAppName("Spark Pi").setMaster("spark://192.168.8.192:7077");
+        SparkConf conf = new SparkConf().setAppName("Spark Pi");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        sc.addJar("E:\\study\\spark\\spark-pi\\out\\artifacts\\spark_pi_jar\\spark-pi.jar");
 
         int slices = 200;
         int n = (int)Math.min(100000L * slices, Integer.MAX_VALUE);
