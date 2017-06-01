@@ -30,6 +30,7 @@ public class SparkPi {
             double y = Math.random();
             return x*x + y*y < 1;
         }).count();
+
         System.out.println("Pi is roughly " + 4.0 * count / n);
 
         sc.stop();
